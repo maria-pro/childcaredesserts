@@ -71,7 +71,11 @@ geocode(address = full_address, method = "osm", verbose = TRUE)
 library(googleway)
 
 key <- ""
-key <- "AIzaSyCDh-0018LAAPHzQU4jtQq0lFpGUXNcNyo"
+key <- ""
+
+
+
+#"AIzaSyCDh-0018LAAPHzQU4jtQq0lFpGUXNcNyo"
 set_key(key = key)
 google_keys()
 
@@ -159,6 +163,8 @@ test_full_set<-geo_data_f%>%
   mutate(
     id = row_number()
   )
+
+test_full_set%>%write_csv("data/test_full_set.csv")
 
 test_1RNSW<-test%>%filter(gcc_code_2021=="1RNSW")
 test = ms_simplify(test_1RNSW, keep = 0.05)
