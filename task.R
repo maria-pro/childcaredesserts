@@ -44,4 +44,30 @@ The final step!!! The process known as a ‘floating catchment area’ and there
 
 Anyway, perhaps if you get to this point, we can discuss in a bit more detail what the approach might be.
 
+#-------
+
+es sorry, I don’t think I was clear.
+
+We need to measure the driving time between the location  of the population and the location of the supply.
+
+The population is the number of children in sa1 areas. To get the longitude and latitude of the sa1 areas you can use the st_centroids() call from the sf package.
+
+The supply is the location of the service providers.
+
+To make the requests smaller, you can separate out the locations of both the population and supply by:
+
+
+  1GSYD
+2GMEL
+1RNSW and 2RVIC
+
+Because we are not really interested in how a regional area is accessing metro childcare centres because it is too far.
+
+There is a need to keep the regional NSW and regional VIC together. This is because of border communities and it will stuff up the calculations further down the track if we separate regional vic and regional NSW.
+
+Let me know if you want to meet to discuss.
+
+Thanks!!!!!!!
+
+  Peter
 
